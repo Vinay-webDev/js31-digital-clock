@@ -1,0 +1,20 @@
+body {
+    background-image: url('moon.jpg');
+    background-color: beige;
+}
+#clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* in order to make vertically center we need to give some height to the div */
+    height: 100vh;
+}
+#clock {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 6.5em;
+    color: #6f1919;
+}
+
+
