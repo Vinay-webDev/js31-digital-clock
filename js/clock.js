@@ -10,9 +10,8 @@ function clock() {
     document.getElementById("clock").textContent = timeString;
 }
 
-
-clock();
-
+/* we have one problem we need to update time for every second but clock(); only call it one time inorder to update for every second we have setInterval() method */
+setInterval(clock, 1000);
 
 
 
