@@ -3,10 +3,14 @@
 function clock() {
     const time = new Date();
     // to make zero padding before digits we have toString() then  padStart()
-    const hours = time.getHours().toString().padStart(2, 0);
+    // to add AM or PM 
+    // we need to re-assgin the hours variable to do that we need to make const ===> let (for re-assginment);
+    let hours = time.getHours().toString().padStart(2, 0);
+    const meridiem = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12;
     const minutes = time.getMinutes().toString().padStart(2,0);
     const seconds = time.getSeconds().toString().padStart(2,0);
-    const timeString = `${hours}:${minutes}:${seconds}`;
+    const timeString = `${hours}:${minutes}:${seconds} ${meridiem}`;
     document.getElementById("clock").textContent = timeString;
 }
 
